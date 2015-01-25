@@ -1,0 +1,15 @@
+machine:
+  timezone: Asia/Tokyo
+  services:
+    - docker
+  pre:
+    - sudo sh -c "curl -L https://github.com/docker/fig/releases/download/1.0.1/fig-`uname -s`-`uname -m` > /usr/local/bin/fig"
+    - sudo chmod +x /usr/local/bin/fig
+
+dependencies:
+  pre:
+    - fig up -d
+
+test:
+  override:
+    - curl http://127.0.0.1:3183/test

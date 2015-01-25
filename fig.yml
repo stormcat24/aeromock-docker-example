@@ -1,0 +1,6 @@
+aeromock:
+  image: stormcat24/aeromock
+  ports:
+    - 3183:3183
+  volumes:
+    - ./aeromock:/project

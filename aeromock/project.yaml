@@ -1,0 +1,5 @@
+ajax:
+  root: ./api_root
+
+static:
+  root: ./static
