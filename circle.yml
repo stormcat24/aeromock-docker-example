@@ -11,5 +11,8 @@ dependencies:
     - fig up -d
 
 test:
+  pre:
+    # wait for starting Aeromock
+    - sleep 5
   override:
     - curl http://127.0.0.1:3183/test
